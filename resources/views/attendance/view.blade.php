@@ -1,3 +1,4 @@
+
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
 @extends('voyager::master')
@@ -51,20 +52,14 @@
                             type: 'get',
                             dataType: 'json',
                             success: function(response){
-                                var len = 0;
-                                if(response != null){
-                                    len = response.length;           
-                                    console.log(len);            
-                                 }
-                                // if(len > 0){
-                                // Read data and create <option >
-                                for(var i=0; i<len; i++){
+                                
+                                for(var i=0; i<response[0].length; i++){
                                     var id = response[0][i].student_id;
                                     var name = response[0][i].first_name;
                                     var option = "<option value='"+id+"'>"+name+"</option>"; 
                                     $("#student").append(option); 
                                     }
-                                for(var i=0; i<len; i++){
+                                for(var i=0; i<response[1].length; i++){
                                     var s_id = response[1][i].id;
                                     var name = response[1][i].subject_name;
                                     var option = "<option value='"+s_id+"'>"+name+"</option>"; 

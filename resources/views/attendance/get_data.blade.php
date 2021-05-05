@@ -1,3 +1,4 @@
+
 @extends('voyager::master')
 
 @section('content')
@@ -29,11 +30,13 @@
                     <option value={{ $sub->id }} name="subject">{{ $sub->subject_name }}</option>
                 @endforeach
             </select>
+
         </div>
     </div>
     <div class="row">
         <button class="btn btn-primary" value="submit">Submit</button>
     </div>
 </div>
+    
 {{ Form::close() }}
 @endsection

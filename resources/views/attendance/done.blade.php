@@ -5,7 +5,7 @@
     <table class="table table-bordered">
     <tr><th>Date</th><th>Student_ID</th><th>Status</th></tr>
     
-    @foreach($attendance As $att)     
+    @foreach($st As $att)     
     
         <tr> 
         <td>{{$att['date']}}</td>     
@@ -18,4 +18,4 @@
         </tr>
     @endforeach
     </table>
-@endsection()
+@endsection

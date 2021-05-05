@@ -1,1 +1,1 @@
-{{echo dd($st)}}
+{{$student_id}}
