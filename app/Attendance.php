@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Gate;
 use App\User;
 
-class AttendanceLog extends Model
+class Attendance extends Model
 {
-    protected $table='attendance_logs';
+    protected $table='attendance';
     
     protected $fillable=['date','student_id','subject','class','teacher_id','status'];
     
